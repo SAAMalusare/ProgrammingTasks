@@ -7,7 +7,7 @@ node {
 	}
 	stage ('Building Code'){
 	   echo "${workspace}"
-	   sh 'perl -v'
+	   sh 'ls -lha'
 	}
 	stage ('Scan Code') {
 	   echo 'Run FOSS scan'
