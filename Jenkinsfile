@@ -1,6 +1,5 @@
 def workspace;
 
-
 node {
 	stage ('Code Checkout'){
             checkout([$class: 'GitSCM', branches: [[name: '*/IntBranch']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a32034e2-afe8-48ef-b50e-87d5f74f2be5', url: 'https://github.com/SAAMalusare/PerlTest.git']]])
@@ -8,7 +7,7 @@ node {
 	}
 	stage ('Building Code'){
 	   echo "${workspace}"
-	   echo perl -v
+	   echo 'perl -v'
 	}
 	stage ('Scan Code') {
 	   echo 'Run FOSS scan'
