@@ -6,4 +6,4 @@ RUN	adduser --quiet --disabled-password --shell /bin/bash --home /home/suhas --g
 RUN	echo "suhas:pass123" | chpasswd
 RUN	usermod -aG sudo suhas 
 RUN mkdir	/home/suhas/workdir
-#copy	.\test.pl	/home/suhas/workdir/test.pl	
+copy	test.pl	/home/suhas/workdir/	
