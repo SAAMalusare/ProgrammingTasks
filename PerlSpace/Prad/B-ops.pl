@@ -27,7 +27,7 @@ if ($path)
                 closedir DIR;
 
                 my  $ignore_list =  GetIgnoreList();
-                my  %ignorelist = $%ignore_list;
+                my  %ignorelist = %$ignore_list;
                 foreach (@files)
                     {
                         next if $_ eq '.';
@@ -50,9 +50,9 @@ sub GetIgnoreList
     {
         my  %ignorelist;
         open (IN, 'ignore.list') or die $!;
-        while (<IN>);
+        while (<IN>)
             {
-                next if $_ = "";
+                next if $_ == " ";
                 $ignorelist{$_}=1
             }
         close IN;    
@@ -76,7 +76,7 @@ sub PerformOps
             $bimg_cmd = `$bimg_cmd`;
 
         print "Executing BMASK Command:- \n";
-        my  $bmask_cmd = 'bmask -ver 7 -datatype u -create 1270,1022,1 -origin 634,510,0 -radius 0,100 '."$output_file"." "."$file";
+        my  $bmask_cmd = 'bmask -ver 7 -datatype u -create 1270,1022,1 -origin 634,510,0 -radius 0,100 '."$mask_output_file"." "."$file";
             print "$bmask_cmd\n";
             $bmask_cmd=`$bmask_cmd`;
 
