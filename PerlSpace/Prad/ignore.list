@@ -1,1 +1,2 @@
-# Add files extentions which should be excluded
+# Add files extentions which should be ignored for processing
+.tiff
