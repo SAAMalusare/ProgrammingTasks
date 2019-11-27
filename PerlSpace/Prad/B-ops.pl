@@ -5,13 +5,14 @@ use Getopt::Long;
 my ($path);
 
 GetOptions ("p=s" => \$path);   # Path to Dir or Path to Sngle File
-chomp $path;
+
 
 print "==========================================================\n";
-print "Bsoft Operations started at ". scalar locatime() ."\n";
+print "Bsoft Operations started at ". scalar localtime() ."\n";
 print "==========================================================\n";
 if ($path)
     {
+        chomp $path;
         if (-f $path)
             {
                 print "File provided as an input\n";
@@ -41,7 +42,7 @@ if ($path)
                     }
             }
         
-        print "Bsoft Operations ended at ". scalar locatime() ."\n";    
+        print "Bsoft Operations ended at ". scalar localtime() ."\n";    
         print "==========================================================\n";       
     }
     else
@@ -51,12 +52,15 @@ if ($path)
 
 sub usage
     {
+        print "\nNo Input file or Directory provided !!!!\n";
+        print "---------------------- OR -----------------------------\n";
         print "Usage: perl B-ops.pl -f <FILE/DIR_WITH_Path>\n";
-        print "Process single file \n";
+        print "To Process single file \n";
         print "E.g. perl B-ops.pl -f /usr/bin/abc.txt\n";
-        print "OR\n";
+        print "\n---------------------- OR -----------------------------\n";
         print "Process files in Directory\n";
         print "E.g. perl B-ops.pl -f /usr/bin \n";
+        print "==========================================================\n";
     }
 
 sub GetIgnoreList
