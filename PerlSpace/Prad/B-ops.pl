@@ -39,12 +39,25 @@ if ($path)
                         print "Processing file:- $each_file \n";
                         PerformOps($each_file);
                     }
-
-
-            }    
+            }
+        
+        print "Bsoft Operations ended at ". scalar locatime() ."\n";    
+        print "==========================================================\n";       
     }
-print "Bsoft Operations ended at ". scalar locatime() ."\n";    
-print "==========================================================\n";    
+    else
+        {
+            usage();
+        }
+
+sub usage
+    {
+        print "Usage: perl B-ops.pl -f <FILE/DIR_WITH_Path>\n";
+        print "Process single file \n";
+        print "E.g. perl B-ops.pl -f /usr/bin/abc.txt\n";
+        print "OR\n";
+        print "Process files in Directory\n";
+        print "E.g. perl B-ops.pl -f /usr/bin \n";
+    }
 
 sub GetIgnoreList
     {
@@ -53,6 +66,8 @@ sub GetIgnoreList
         while (<IN>)
             {
                 next if $_ == " ";
+                next if $_=~/^\#/g;
+
                 $ignorelist{$_}=1
             }
         close IN;    
