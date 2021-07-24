@@ -1,5 +1,7 @@
 from sys import platform
-import os, wget
+import os, wget, urllib, sys
+
+kubectl_version = "v1.21.0"
 
 def check_os_func():
     if platform == "linux" or platform == "linux2":
@@ -15,26 +17,32 @@ def check_env_vars():
 
 def download_file_from_web():
 
-    remote_url = 'https://dl.k8s.io/release/v1.21.0/bin/windows/amd64/kubectl.exe'
-
-    local_file = 'kubectl.exe'
+    remote_url = "https://dl.k8s.io/release/"+kubectl_version+"/bin/windows/amd64/kubectl.exe"
+    
+    local_file = "kubectl.exe"
     
     try:
         wget.download(remote_url, local_file)
-        return "\nY"
-    except:
-        return "\nUnable to Download"
+        return "Y"
+    except urllib.error.HTTPError as exception:
+        return exception
 
 
-my_options = int(input("Type 1 to check OS. (Output : 1 for Linux, 2 for Windows) \nType 2 to check if ENV variables exist. \nType 3 to check successful download of file. \n\n"))
 
-print("\nYou've entered ",my_options)
+l1 = sys.argv
 
-if my_options == 1:
-    print(check_os_func())
-elif my_options == 2:
-    print(check_env_vars())
-elif my_options == 3:
-    print(download_file_from_web())
+
+
+if len(l1) == 2 :
+
+    if l1[1] == "1":
+        print(check_os_func())
+    elif l1[1] == "2": 
+        print(check_env_vars())
+    elif l1[1] == "3":
+        print(download_file_from_web())
+    else:
+        print("Please enter number between 1, 2 and 3")
+
 else:
-    print("please type number between 1, 2 or 3")
+    print("Enter Only One Argument")
