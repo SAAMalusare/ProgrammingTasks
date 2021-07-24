@@ -1,3 +1,6 @@
+# Download git:
+https://git-scm.com/download/win
+
 # ProgrammingTasks
 Clone this repo:
 git clone https://github.com/SAAMalusare/ProgrammingTasks.git
