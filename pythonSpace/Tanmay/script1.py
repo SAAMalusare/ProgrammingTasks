@@ -24,10 +24,10 @@ def download_file_from_web():
     try:
         wget.download(remote_url, local_file)
         return "Y"
-    except urllib.error.HTTPError as exception:
+    except (urllib.error.HTTPError,urllib.error.URLError) as exception:
         return exception
-
-
+    except:
+        return ("Error Occured")
 
 l1 = sys.argv
 
@@ -45,4 +45,4 @@ if len(l1) == 2 :
         print("Please enter number between 1, 2 and 3")
 
 else:
-    print("Enter Only One Argument")
+    print("Enter Only One Argument")        
