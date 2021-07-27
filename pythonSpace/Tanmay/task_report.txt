@@ -1,0 +1,13 @@
+Day 1 26-07-2021
+
+- git, github, visual code, python setup
+- python introduction
+- print statement
+
+Day 2 27-07-2021
+
+python
+- variables, datatypes, function, comments,arithmetic operations
+
+git
+- 1st repo how to clone, add, commit, remote add, push
