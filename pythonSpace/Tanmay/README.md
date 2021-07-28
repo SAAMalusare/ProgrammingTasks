@@ -12,3 +12,12 @@ git add *
 commit and Push your changes to Repo:
 git commit -am '<Comment goes here .. e.g. added abc.py >'
 git push
+
+
+# How to run sys_chk_install.py script
+
+After running this script it will check your OS type Windows/Linux
+
+if this path exists in your windows system 'C:\\bin\\' then it will download the "Kubectl" file
+
+after succesfull download it will download aws cli on the system, then it will run the AWSCLIV2.msi file. Complete the installation by clicking on next.
