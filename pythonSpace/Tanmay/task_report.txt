@@ -11,3 +11,12 @@ python
 
 git
 - 1st repo how to clone, add, commit, remote add, push
+
+Day 3 28-07-2021 (Hrudaya)
+
+python
+- methods, typecasting, string conactination, input
+
+git
+- clone, add, create new branch, push in branch
+
