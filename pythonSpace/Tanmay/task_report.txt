@@ -4,6 +4,7 @@ Day 1 26-07-2021
 - python introduction
 - print statement
 
+
 Day 2 27-07-2021
 
 python
@@ -11,6 +12,7 @@ python
 
 git
 - 1st repo how to clone, add, commit, remote add, push
+
 
 Day 3 28-07-2021 (Hrudaya)
 
@@ -20,3 +22,19 @@ python
 git
 - clone, add, create new branch, push in branch
 
+
+Day 4 30-07-2021 (Hrudaya)
+
+Revision
+python
+- methods, typecasting, string conactination, input
+
+git
+- clone, add, create new branch, push in branch
+
+
+Day 5 02-08-2021 (Hrudaya)
+
+python
+
+- list,String and list slicing, conditional statements
