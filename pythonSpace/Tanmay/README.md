@@ -18,6 +18,10 @@ git push
 
 After running this script it will check your OS type Windows/Linux
 
+for windows:
 if this path exists in your windows system 'C:\\bin\\' then it will download the "Kubectl" file
 
 after succesfull download it will download aws cli on the system, then it will run the AWSCLIV2.msi file. Complete the installation by clicking on next.
+
+for linux:
+Script will install kubectl and awscli in your system
