@@ -38,3 +38,8 @@ Day 5 02-08-2021 (Hrudaya)
 python
 
 - list,String and list slicing, conditional statements
+
+
+16-08-2021 (Hrudaya)
+
+python Revision
